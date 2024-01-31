@@ -21,7 +21,7 @@ public interface JuegoRolDao extends MongoRepository<JuegoRol, Integer> {
 	 * @param id    an Integer representing the id of the Rol Game.
 	 */
 	@Transactional
-	@Query("{'_id' : ?1}, {'$set': {'nivel' : ?0}}")
-	void updateJuegoRol(int nivel, Integer id);
+	@Query("{'_id' : ?1} {'$set': {'nivel' : ?0}}")
+	void updateJuegoRol(Integer nivel, Integer id);
 
 }

@@ -101,13 +101,14 @@ public class Service {
 	 * @return a JuegoMesa object or a null.
 	 */
 	public Optional<JuegoMesa> updateJuegoDeMesaById(Integer id, String descripcion, String tipo) {
+		System.out.println(descripcion + tipo + id);
 		juegoMesaDao.updateJuegoMesa(descripcion, tipo, id);
 		return juegoMesaDao.findById(id);
 	}
 
 	/**
 	 * Deletes a JuegoMesa object from the database by its id.
-	 * 
+	 *
 	 * @param id representing an Integer.
 	 */
 	public void deleteJuegoMesa(Integer id) {
@@ -187,7 +188,7 @@ public class Service {
 	 */
 	public ArrayList<Merchandising> getAllMerchandising() {
 		return (ArrayList<Merchandising>) merchandisingDao.findAll();
-	};
+	}
 
 	/**
 	 * Show all the Merchandising objects with the same type from the database.

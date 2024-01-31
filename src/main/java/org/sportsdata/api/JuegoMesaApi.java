@@ -1,5 +1,6 @@
 package org.sportsdata.api;
 
+import lombok.AllArgsConstructor;
 import org.sportsdata.model.*;
 import org.sportsdata.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("mesa")
+@AllArgsConstructor
 public class JuegoMesaApi {
 	@Autowired
 	private Service service;
