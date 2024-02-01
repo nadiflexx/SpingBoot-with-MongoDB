@@ -16,13 +16,13 @@ import java.util.ArrayList;
  * @since 1.0
  */
 public interface JuegoCartasDao extends MongoRepository<JuegoCartas, Integer> {
-	/**
-	 * Selects Card Games that have the same season.
-	 *
-	 * @param temporada Integer representing the season to search.
-	 * @return an ArrayList of all the Card Games with the same season.
-	 */
+    /**
+     * Selects Card Games that have the same season.
+     *
+     * @param temporada Integer representing the season to search.
+     * @return an ArrayList of all the Card Games with the same season.
+     */
 
-	@Query("{ 'temporada' : ?0 }")
-	ArrayList<JuegoCartas> findJuegoCartasByTemporada(@Param("temporada") int temporada);
+    @Query("{ 'temporada' : ?0 }")
+    ArrayList<JuegoCartas> findJuegoCartasByTemporada(@Param("temporada") int temporada);
 }
